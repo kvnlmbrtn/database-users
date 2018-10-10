@@ -1,0 +1,84 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("/images/whitenoise.png"), linear-gradient(45deg, #efdec6, #cad8d2, #97c2c1, #9abcdd, #697fa3);
+  text-align: center;
+}
+
+h1 {
+  color: white;
+}
+
+h3 {
+  color: #697fa3;
+}
+
+
+#logInForm, #signUpForm {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  width: 75%;
+
+  margin: 3em auto 3em auto;
+  background-color: white;
+  border-radius: 30px;
+  padding: 1em 0 1em 0;
+}
+
+form {
+  display: block;
+  position: relative;
+  width: 75%;
+}
+
+
+input {
+			display: block;
+      -webkit-appearance: none;
+			height: 2.5em;
+			line-height: 2.5em;
+			margin: 1em auto 1em auto;
+			font-size: 0.9em;
+			width: 50%;
+			border: none;
+			background: transparent;
+			border-bottom: solid 1px #c9c9c9;
+			outline: 0;
+			padding: 0;
+			text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+		}
+
+			input:focus {
+				border-bottom: 2px #008B8B solid;
+			}
+
+      [placeholder] {
+    		opacity: 0.6;
+    	}
+
+  button {
+    display: block;
+    -webkit-appearance: none;
+    border-radius: 30px;
+    background-color: #697fa3;
+    color: white;
+    border: none;
+    line-height: 1em;
+    font-size: 1em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin: 1em auto 1em auto;
+  }
+
+    button:hover {
+      background-color: #97c2c1;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }

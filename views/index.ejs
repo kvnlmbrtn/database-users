@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log In Module</title>
+    <link rel='stylesheet' href='/stylesheets/styleUser.css' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>Welcome to our Website</h1>
+
+    <div id="pageWrapper">
+
+        <div id="logInForm">
+          <header>
+            <h3>If you have already an account, please log in</h3>
+          </header>
+          <form action="/userLogIn" method="POST">
+            <input required type="text" name="userName" placeholder="Roger">
+            <input required type="password" name="passwordLogIn" placeholder="........">
+            <button type="submit" name="logInButton" id="logInButton">Log in</button>
+          </form>
+        </div>
+
+        <div id="signUpForm">
+          <header>
+            <h3>If you are registered yet, please sign up herebelow</h3>
+          </header>
+          <form action="/userSignUp" method="post">
+            <input required type="text" name="firstNameSignUp" placeholder="Roger">
+            <input required type="text" name="lastNameSignUp" placeholder="Federer">
+            <input required type="email" name="emailSignUp" placeholder="roger@maestro.com">
+            <input required type="password" name="passwordSignUp" placeholder="........">
+            <input required type="phone" name="phoneNumberSignUp" placeholder="06 11 22 33 44">
+            <input required type="text" name="addressSignUp" placeholder="Switzerland">
+            <input required type="text" name="zipCodeSignUp" placeholder="11 222">
+            <button name="signUpButton" id="signUpButton">Sign up</button>
+          </form>
+        </div>
+
+    </div>
+
+  </body>
+</html>
