@@ -1,6 +1,5 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-family: 'Montserrat', sans-serif;
   background-image: url("/images/whitenoise.png"), linear-gradient(45deg, #efdec6, #cad8d2, #97c2c1, #9abcdd, #697fa3);
   text-align: center;
@@ -23,7 +22,7 @@ h3 {
   align-items: center;
 
   position: relative;
-  width: 75%;
+  width: 100%;
 
   margin: 3em auto 3em auto;
   background-color: white;
@@ -31,10 +30,28 @@ h3 {
   padding: 1em 0 1em 0;
 }
 
+.userInputs {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 2.5em;
+  line-height: 2.5em;
+  position: relative;
+  width: 80%;
+}
+
+.userInputs label {
+  display: block;
+  position: relative;
+  width: 40%;
+  text-align: right;
+}
+
 form {
   display: block;
   position: relative;
-  width: 75%;
+  width: 90%;
 }
 
 
@@ -43,7 +60,7 @@ input {
       -webkit-appearance: none;
 			height: 2.5em;
 			line-height: 2.5em;
-			margin: 1em auto 1em auto;
+			margin: 0 auto 1em auto;
 			font-size: 0.9em;
 			width: 50%;
 			border: none;
@@ -82,3 +99,17 @@ input {
       cursor: pointer;
       border: none;
     }
+
+
+
+#logInErrorBanner {
+  display: block;
+  position: relative;
+  color: black;
+  border: 1px black solid;
+  border-radius: 30px;
+  width: 75%;
+  margin: 1em auto 1em auto;
+  padding: 1em 2em 1em 2em;
+  background-color: #efdec6;
+}

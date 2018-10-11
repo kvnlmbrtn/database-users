@@ -1,0 +1,121 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("/images/whitenoise.png"), linear-gradient(90deg, #efdec6, #cad8d2, #97c2c1, #9abcdd, #697fa3);
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  margin: 2em auto 2em auto;
+}
+
+ul li {
+  list-style: none;
+}
+
+
+/* ------------------------------------------------------------- */
+/* Définition du format de la div contenant la photo utilisateur */
+/* ------------------------------------------------------------- */
+
+#userPortrait {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  height: 200px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+          #pictureUserDiv {
+            border-radius: 50%;
+            border: 1px black solid;
+            height: 100px;
+            width: 100px;
+            background-color: white;
+
+            display: block;
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          #pictureUser {
+            border-radius: 50%;
+            border: 1px black solid;
+            height: 90px;
+            width: 90px;
+            background-image: url('/images/team.png');
+            background-size: cover;
+            background-position: center;
+          }
+
+
+          #divLinks {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+
+#userOrders {
+  border-radius: 30px;
+  background-color: white;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em 1em 1em 1em;
+}
+
+
+.userParameters {
+  color: #8e8e8e;
+}
+
+.userAttributes {
+  font-weight: 600;
+}
+
+
+/* ------------------------------------------------------------- */
+/* Définition du format de la div contenant la photo utilisateur */
+/* ------------------------------------------------------------- */
+
+#actionIcons {
+  height: 150px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.row {
+  margin: 1em 0.5em 1em 0.5em;
+}
+
+
+.fas {
+  font-size: 30px;
+  color: white;
+  margin: 0.5em auto 0.5em auto;
+}
+
+
+
+.order-lines {
+  display: block;
+  border-radius: 30px;
+  background-color: #d2eaef;
+  margin: 1em auto 1em auto;
+  padding: 1.5em 0.5em 0.5em 1.5em;
+  text-align: left;
+}
+
+  .order-lines span {
+    font-weight: 700;
+  }
