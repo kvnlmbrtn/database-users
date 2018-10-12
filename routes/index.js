@@ -3,8 +3,8 @@ var request = require('request');
 var mongoose = require('mongoose');
 var router = express.Router();
 
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+var bcrypt = require('bcryptjs');
+var salt = bcrypt.genSaltSync(10);
 
 var options = {
   server: {
@@ -66,11 +66,12 @@ router.get('/', function(req, res, next) {
 
 router.post('/userLogIn', function(req, res, next) {
   req.session.pseudo = req.body.pseudoLogIn;
-
+  var hash = bcrypt.hashSync(req.body.passwordLogIn, salt);
+  console.log(hash);
 
   userModel.find( {
     pseudo: req.body.pseudoLogIn,
-    password: req.body.passwordLogIn
+    password: hash
   }, function (err, users) {
       if (users.length == 0) {
         console.log("il y a une erreur de saisie");
@@ -96,8 +97,8 @@ router.post('/userSignUp', function(req, res, next) {
 
   // Ajout de l'utilisateur à la base de données
 
-  bcrypt.hash(req.body.passwordSignUp, saltRounds, function(err, hash) {
-    console.log(hash);
+  var hash = bcrypt.hashSync(req.body.passwordSignUp, salt);
+  console.log(hash);
 
     var newUser = new userModel ({
       firstName: req.body.firstNameSignUp,
@@ -113,7 +114,6 @@ router.post('/userSignUp', function(req, res, next) {
           res.render('userDetails', {title, pseudo: req.session.pseudo, user})
         }
       );
-  });
 });
 
 
